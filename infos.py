@@ -49,27 +49,27 @@ def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
         msg+= '/cancel_' + tid
     return msg
 def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
-    msg = '⏫ Subiendo A La Nube☁... \n\n'
-    msg+= '➤ Nombre: ' + str(filename)+'\n'
+    msg = '🔰 Subiendo A La Nube☁... \n\n'
+    msg+= '📔 Nombre: ' + str(filename)+'\n'
     if originalname!='':
         msg = str(msg).replace(filename,originalname)
-        msg+= '⏫Subiendo: ' + str(filename)+'\n'
-    msg+= '➤ Tamaño Total: ' + str(sizeof_fmt(totalBits))+'\n'
-    msg+= '➤ Subido: ' + str(sizeof_fmt(currentBits))+'\n'
-    msg+= '➤ Velocidad: ' + str(sizeof_fmt(speed))+'/s\n'
-    msg+= '➤ Tiempo: ' + str(datetime.timedelta(seconds=int(time))) +'\n'
+        msg+= '📤Subiendo: ' + str(filename)+'\n'
+    msg+= '⚖️ Tamaño Total: ' + str(sizeof_fmt(totalBits))+'\n'
+    msg+= '📦 Subido: ' + str(sizeof_fmt(currentBits))+'\n'
+    msg+= '📨 Velocidad: ' + str(sizeof_fmt(speed))+'/s\n'
+    msg+= '⌛ Tiempo: ' + str(datetime.timedelta(seconds=int(time))) +'\n'
 
-    msg = '⏫ Subiendo A La Nube☁...\n\n'
-    msg += '➤ Nombre: '+filename+'\n'
+    msg = '🔰 Subiendo A La Nube☁...\n\n'
+    msg += '📔 Nombre: '+filename+'\n'
     if originalname!='':
         msg = str(msg).replace(filename,originalname)
-        msg+= '➤ Parte: ' + str(filename)+'\n'
+        msg+= '📚 Parte: ' + str(filename)+'\n'
     msg += text_progres(currentBits,totalBits)+'\n'
-    msg += '➤ Porcentaje: '+str(porcent(currentBits,totalBits))+'%\n\n'
-    msg += '➤ Total: '+sizeof_fmt(totalBits)+'\n\n'
-    msg += '➤ Descargado: '+sizeof_fmt(currentBits)+'\n\n'
-    msg += '➤ Velocidad: '+sizeof_fmt(speed)+'/s\n\n'
-    msg += '➤ Tiempo de Descarga: '+str(datetime.timedelta(seconds=int(time)))+'s\n\n'
+    msg += '📊 Porcentaje: '+str(porcent(currentBits,totalBits))+'%\n'
+    msg += '⚖️ Total: '+sizeof_fmt(totalBits)+'\n'
+    msg += '📥 Descargado: '+sizeof_fmt(currentBits)+'\n'
+    msg += '📨 Velocidad: '+sizeof_fmt(speed)+'/s\n'
+    msg += '⌛ Tiempo de Descarga: '+str(datetime.timedelta(seconds=int(time)))+'s\n'
 
     return msg
 def createCompresing(filename,filesize,splitsize):
