@@ -29,14 +29,14 @@ def porcent(index,max):
     return porcent
 
 def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
-    msg = '🔰ඞ Descargando... \n\n'
+    msg = '🔰ඞ Descargando🖤🔸🔸🔸 \n\n'
     msg+= '📔ඞ Nombre: ' + str(filename)+'\n'
     msg+= '⚖️ඞ Tamaño Total: ' + str(sizeof_fmt(totalBits))+'\n'
     msg+= '📥ඞ Descargado: ' + str(sizeof_fmt(currentBits))+'\n'
     msg+= '📨ඞ Velocidad: ' + str(sizeof_fmt(speed))+'/s\n'
     msg+= '⌛ඞ Tiempo: ' + str(datetime.timedelta(seconds=int(time))) +'\n\n'
 
-    msg = '🔰ඞ Descargando Archivo....\n\n'
+    msg = '🔰ඞ Descargando Archivo🖤🔸🔸🔸\n\n'
     msg += '🗂️ඞ Archivo: '+filename+'\n'
     msg += text_progres(currentBits,totalBits)+'\n'
     msg += '📊ඞ Porcentaje: '+str(porcent(currentBits,totalBits))+'%\n'
@@ -49,7 +49,7 @@ def createDownloading(filename,totalBits,currentBits,speed,time,tid=''):
         msg+= '/cancel_' + tid
     return msg
 def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
-    msg = '🔰ඞ Subiendo A La Nube☁... \n\n'
+    msg = '🔰ඞ Subiendo A La Nube💜🔸🔸🔸\n\n'
     msg+= '📔ඞ Nombre: ' + str(filename)+'\n'
     if originalname!='':
         msg = str(msg).replace(filename,originalname)
@@ -59,7 +59,7 @@ def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
     msg+= '📨ඞ Velocidad: ' + str(sizeof_fmt(speed))+'/s\n'
     msg+= '⌛ඞ Tiempo: ' + str(datetime.timedelta(seconds=int(time))) +'\n'
 
-    msg = '🔰ඞ Subiendo A La Nube☁...\n\n'
+    msg = '🔰ඞ Subiendo A La Nube💜🔸🔸🔸\n\n'
     msg += '📔ඞ Nombre: '+filename+'\n'
     if originalname!='':
         msg = str(msg).replace(filename,originalname)
@@ -73,7 +73,7 @@ def createUploading(filename,totalBits,currentBits,speed,time,originalname=''):
 
     return msg
 def createCompresing(filename,filesize,splitsize):
-    msg = '🗜ඞ Comprimiendo... \n\n'
+    msg = '🗜ඞ Comprimiendo💙🔸🔸🔸\n\n'
     msg+= '📔ඞ Nombre: ' + str(filename)+'\n'
     msg+= '⚖️ඞ Tamaño Total: ' + str(sizeof_fmt(filesize))+'\n'
     msg+= '🗂️ඞ Tamaño Partes: ' + str(sizeof_fmt(splitsize))+'\n'
@@ -100,7 +100,7 @@ def createFileMsg(filename,files):
     return ''
 
 def createFilesMsg(evfiles):
-    msg = '🗄️Archivos ('+str(len(evfiles))+')📑\n\n'
+    msg = '🗄️ඞ Archivos ('+str(len(evfiles))+')📑\n\n'
     i = 0
     for f in evfiles:
             try:
@@ -118,28 +118,28 @@ def createFilesMsg(evfiles):
 def createStat(username,userdata,isadmin):
     from pyobigram.utils import sizeof_fmt
     msg = '👤ඞ Condiguraciones De Usuario\n\n'
-    msg+= '📔Nombre: @' + str(username)+'\n'
-    msg+= '🗣️User: ' + str(userdata['moodle_user'])+'\n'
-    msg+= '🔒Password: ' + str(userdata['moodle_password'])+'\n'
-    msg+= '🔗Host: ' + str(userdata['moodle_host'])+'\n'
+    msg+= '📔ඞ Nombre: @' + str(username)+'\n'
+    msg+= '🗣️ඞ User: ' + str(userdata['moodle_user'])+'\n'
+    msg+= '🔒ඞ Password: ' + str(userdata['moodle_password'])+'\n'
+    msg+= '🔗ඞ Host: ' + str(userdata['moodle_host'])+'\n'
     if userdata['cloudtype'] == 'moodle':
-        msg+= '🛠️RepoID: ' + str(userdata['moodle_repo_id'])+'\n'
-    msg+= '🎫CloudType: ' + str(userdata['cloudtype'])+'\n'
-    msg+= '🗄️UpType: ' + str(userdata['uploadtype'])+'\n'
+        msg+= '🛠️ඞ RepoID: ' + str(userdata['moodle_repo_id'])+'\n'
+    msg+= '🎫ඞ CloudType: ' + str(userdata['cloudtype'])+'\n'
+    msg+= '🗄️ඞ UpType: ' + str(userdata['uploadtype'])+'\n'
     if userdata['cloudtype'] == 'cloud':
-        msg+= '📫Dir: /' + str(userdata['dir'])+'\n'
-    msg+= '📚Tamaño de Zip : ' + sizeof_fmt(userdata['zips']*1024*1024) + '\n\n'
+        msg+= '📫ඞ Dir: /' + str(userdata['dir'])+'\n'
+    msg+= '📚ඞ Tamaño de Zip : ' + sizeof_fmt(userdata['zips']*1024*1024) + '\n\n'
     msgAdmin = 'No'
     if isadmin:
         msgAdmin = 'Si'
-    msg+= '🔑Admin : ' + msgAdmin + '\n'
+    msg+= '🔑ඞ Admin : ' + msgAdmin + '\n'
     proxy = 'NO'
     if userdata['proxy'] !='':
        proxy = 'SI'
     tokenize = 'NO'
     if userdata['tokenize']!=0:
        tokenize = 'SI'
-    msg+= '📍Proxy : ' + proxy + '\n'
-    msg+= '🔧Tokenize : ' + tokenize + '\n\n'
-    msg+= '⚙️Configurar Moodle\n /acc user,password'
+    msg+= '📍ඞ Proxy : ' + proxy + '\n'
+    msg+= '🔧ඞ Tokenize : ' + tokenize + '\n\n'
+    msg+= '⚙️ඞ Configurar Moodle\n /acc user,password'
     return msg
