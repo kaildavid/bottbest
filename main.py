@@ -269,7 +269,7 @@ def onmessage(update,bot:ObigramClient):
                     user = str(msgText).split(' ')[1]
                     jdb.create_user(user)
                     jdb.save()
-                    msg = '✅ @'+user+' tiene acceso al bot'
+                    msg = '💟 @'+user+' tiene acceso al bot'
                     bot.sendMessage(update.message.chat.id,msg)
                 except:
                     bot.sendMessage(update.message.chat.id,f'⚠Error en el comando /add user⚠')
@@ -284,7 +284,7 @@ def onmessage(update,bot:ObigramClient):
                     user = str(msgText).split(' ')[1]
                     jdb.create_admin(user)
                     jdb.save()
-                    msg = '✅Ahora @'+user+' es admin del bot'
+                    msg = '👤Ahora @'+user+' es admin del bot'
                     bot.sendMessage(update.message.chat.id,msg)
                 except:
                     bot.sendMessage(update.message.chat.id,f'⚠Error en el comando /admin user⚠')
@@ -299,7 +299,7 @@ def onmessage(update,bot:ObigramClient):
                     user = str(msgText).split(' ')[1]
                     jdb.create_user_evea_preview(user)
                     jdb.save()
-                    msg = '✅ @'+user+' está en modo preview'
+                    msg = '♿ @'+user+' está en modo preview'
                     bot.sendMessage(update.message.chat.id,msg)
                 except:
                     bot.sendMessage(update.message.chat.id,f'⚠Error en el comando /admin user⚠')
@@ -317,7 +317,7 @@ def onmessage(update,bot:ObigramClient):
                         return
                     jdb.remove(user)
                     jdb.save()
-                    msg = '🚷 @'+user+' ⚠Baneado⚠'
+                    msg = '🚮 @'+user+' 🛑Baneado⛔'
                     bot.sendMessage(update.message.chat.id,msg)
                 except:
                     bot.sendMessage(update.message.chat.id,f'⚠Error en el comando /ban user⚠')
@@ -346,7 +346,7 @@ def onmessage(update,bot:ObigramClient):
             return
 
         if '/about' in msgText:
-            bot.sendMessage(update.message.chat.id, f'🤖Bot Verción 1.3.5')
+            bot.sendMessage(update.message.chat.id, f'🔸Versión del bot 1.3.5🔸')
             return
 
         if '/crypt' in msgText:
@@ -556,13 +556,12 @@ def onmessage(update,bot:ObigramClient):
 
         if '/start' in msgText:
             
-            msg = '🍜 Bot Draken Downloader iniciado ⛩\n\n'
-            msg+= '🔗 Enlaces soportados MEGA, GoogleDrive y Enlaces directos\n\n'
-            msg+= '❔ Como Descargar\n\n'
-            msg+= '1. Envía el enlace directo o comparte desde Telegram el archivo que quieres descargar.\n'
-            msg+= '2. Usa el TXT de descarga que se genera y los abres con el XDownloader\n\n'
-            msg+= '👩🏻‍💻Para saber los comandos solamente es poer el comando /help\n'
-            msg+= '🤖Para saber info del bot solamente es poer el comando /about'
+            msg = 'Bienvenido al bot personal de @EL_Wizard 😌🤙🍧\n\n'
+            msg+= '🔵Enlaces soportados MEGA, GoogleDrive y Enlaces directos\n\n'
+            msg+= '💜Como Descargar🖤\n'
+            msg+= '❇️Envía el enlace directo\n'
+            msg+= '❇️Usa el TXT de descarga que se genera y los abres con el XDownloader\n\n'
+            msg+= '❕Para saber sobre el bot ponga el comando /about❕'
             bot.editMessageText(message,msg)
         elif '/files' == msgText and user_info['cloudtype']=='moodle':
              proxy = ProxyCloud.parse(user_info['proxy'])
