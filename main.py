@@ -544,7 +544,7 @@ def onmessage(update,bot:ObigramClient):
                 msg = tcancel.getStore('msg')
                 tcancel.store('stop',True)
                 time.sleep(3)
-                bot.editMessageText(msg,'⚠Descarga Cancelada⚠')
+                bot.editMessageText(msg,'🔶Descarga Cancelada🔷')
             except Exception as ex:
                 print(str(ex))
             return
@@ -576,7 +576,7 @@ def onmessage(update,bot:ObigramClient):
                  bot.editMessageText(message,filesInfo)
                  client.logout()
              else:
-                bot.editMessageText(message,'🔶Error y Causas🔷\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
+                bot.editMessageText(message,'🔶Error y Causas🔷\n🔴Revise su Cuenta\n⚫Servidor Desabilitado: '+client.path)
         elif '/txt_' in msgText and user_info['cloudtype']=='moodle':
              findex = str(msgText).split('_')[1]
              findex = int(findex)
@@ -594,7 +594,7 @@ def onmessage(update,bot:ObigramClient):
                  client.logout()
                  bot.editMessageText(message,'TxT Aqui')
              else:
-                bot.editMessageText(message,'🔶Error y Causas🔷\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
+                bot.editMessageText(message,'🔶Error y Causas🔷\n🔴Revise su Cuenta\n⚫Servidor Desabilitado: '+client.path)
              pass
         elif '/del_' in msgText and user_info['cloudtype']=='moodle':
             findex = int(str(msgText).split('_')[1])
@@ -611,7 +611,7 @@ def onmessage(update,bot:ObigramClient):
                 client.logout()
                 bot.editMessageText(message,'🔶Archivo Borrado🔷')
             else:
-                bot.editMessageText(message,'🔶Error y Causas🔷\n1-Revise su Cuenta\n2-Servidor Desabilitado: '+client.path)
+                bot.editMessageText(message,'🔶Error y Causas🔷\n🔴Revise su Cuenta\n⚫Servidor Desabilitado: '+client.path)
         elif 'http' in msgText:
             url = msgText
             ddl(update,bot,message,url,file_name='',thread=thread,jdb=jdb)
