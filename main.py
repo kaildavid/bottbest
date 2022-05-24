@@ -238,7 +238,7 @@ def onmessage(update,bot:ObigramClient):
         tl_admin_user = os.environ.get('tl_admin_user')
 
         #set in debug
-        tl_admin_user = 'EL_Wizard'
+        tl_admin_user = 'ELLP99'
 
         jdb = JsonDatabase('database')
         jdb.check_create()
@@ -556,7 +556,7 @@ def onmessage(update,bot:ObigramClient):
 
         if '/start' in msgText:
             
-            msg = 'Bienvenido al bot personal de @EL_Wizard 😌🤙🍧\n\n'
+            msg = 'Bienvenido al bot personal de @ELLP99 😌🤙🍧\n\n'
             msg+= '🔵Enlaces soportados MEGA, GoogleDrive y Enlaces directos\n\n'
             msg+= '💜Como Descargar🖤\n'
             msg+= '❇️Envía el enlace directo\n'
@@ -640,7 +640,7 @@ def main():
     bot_token = os.environ.get('bot_token')
 
     #set in debug
-    bot_token = '5284221116:AAG8gD9tKs_Hg1BrFQP4kWyQFN9s4sdGA9Y'
+    bot_token = '5382777760:AAEZkDI6E09z3Z984Fik-PSIjQQsjQG4Uf4'
 
     bot = ObigramClient(bot_token)
     bot.onMessage(onmessage)
